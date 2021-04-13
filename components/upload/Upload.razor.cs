@@ -74,6 +74,8 @@ namespace AntDesign
 
         [Parameter]
         public bool ShowButton { get; set; } = true;
+        [Parameter]
+        public EventCallback<UploadEventArgs> CustomRequest { get; set; }
 
         private bool IsText => ListType == "text";
         private bool IsPicture => ListType == "picture";

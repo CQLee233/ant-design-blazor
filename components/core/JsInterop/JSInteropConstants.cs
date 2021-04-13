@@ -25,6 +25,8 @@ namespace AntDesign
 
         public static string GetFileInfo => $"{FUNC_PREFIX}getFileInfo";
 
+        public static string GetFileData => $"{FUNC_PREFIX}getFileData";
+
         public static string GetBoundingClientRect => $"{FUNC_PREFIX}getBoundingClientRect";
 
         public static string AddDomEventListener => $"{FUNC_PREFIX}addDomEventListener";

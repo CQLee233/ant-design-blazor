@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
@@ -58,6 +60,9 @@ namespace AntDesign.Internal
                 }
             }
         }
+
+        [Parameter]
+        public EventCallback<UploadEventArgs> CustomRequest { get; set; }
 
         [Inject]
         public IJSRuntime JSRuntime { get; set; }
@@ -130,7 +135,17 @@ namespace AntDesign.Internal
                 await Upload.FileListChanged.InvokeAsync(this.Upload.FileList);
 
                 await InvokeAsync(StateHasChanged);
-                await JSRuntime.InvokeVoidAsync(JSInteropConstants.UploadFile, _file, index, Data, Headers, id, Action, Name, _currentInstance, "UploadChanged", "UploadSuccess", "UploadError");
+
+                if(CustomRequest.HasDelegate)
+                {
+                    var file = await JSRuntime.InvokeAsync<string>(JSInteropConstants.GetFileData, _file, 0);
+                    var data = Convert.FromBase64String(file);
+                    await CustomRequest.InvokeAsync(new UploadEventArgs() { Data = data, FileName = fileItem.FileName });
+                }
+                else
+                {
+                    await JSRuntime.InvokeVoidAsync(JSInteropConstants.UploadFile, _file, index, Data, Headers, id, Action, Name, _currentInstance, "UploadChanged", "UploadSuccess", "UploadError");
+                }
                 index++;
             }
 

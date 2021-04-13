@@ -91,6 +91,31 @@ export function getFileInfo(element) {
   }
 }
 
+function arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = new Uint8Array(buffer);
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+}
+
+export function readData(file) {
+    return new Promise((resolve) => {
+        let fileReader = new FileReader();
+        fileReader.onload = (e) => resolve(arrayBufferToBase64(fileReader.result));
+        fileReader.readAsArrayBuffer(file);
+    });
+}
+
+export function getFileData(element, index) {
+    if (element.files && element.files.length >= index) {
+        var file = element.files[index];
+        return readData(file);
+    }
+}
+
 export function getObjectURL(file: File) {
   var url = null;
   if (window.URL != undefined) {
