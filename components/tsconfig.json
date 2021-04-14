@@ -4,7 +4,7 @@
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es2017"
+    "target": "es2015"
   },
   "files": [ "main.ts" ],
   "exclude": [

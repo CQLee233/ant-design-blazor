@@ -76,6 +76,9 @@ namespace AntDesign
         [Parameter]
         public EventCallback<PaginationEventArgs> OnPageSizeChange { get; set; }
 
+        [Parameter]
+        public bool ShowQuickJumper { get; set; }
+
         private int _total;
         private int _dataSourceCount;
         private string _paginationPosition = "bottomRight";

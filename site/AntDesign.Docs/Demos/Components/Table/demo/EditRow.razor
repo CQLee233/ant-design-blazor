@@ -1,4 +1,4 @@
-﻿<Table DataSource="listOfData" TItem="ItemData" RowClassName="@(_=>"editable-row")" Bordered TableLayout="fixed">
+﻿<Table DataSource="listOfData" TItem="ItemData" RowClassName="@(_=>"editable-row")" Bordered TableLayout="fixed" ShowQuickJumper="true">
     <ChildContent Context="data">
         <Column TData="string" Title="Name">
             @if (!editCache[data.Id].edit)
