@@ -9,11 +9,11 @@ using System.Text;
 
 namespace AntDesign
 {
-    public class TableFilter<TValue>
+    public class TableFilter
     {
         public string Text { get; set; }
 
-        public TValue Value { get; set; }
+        public object Value { get; set; }
 
         public bool Selected { get; set; }
 
@@ -27,12 +27,17 @@ namespace AntDesign
         }
     }
 
+    public class TableFilter<TValue> : TableFilter
+    {
+        new public TValue Value { get => (TValue)(base.Value ?? default(TValue)); set => base.Value = value; }
+    }
+
     public enum TableFilterCompareOperator
     {
         Equals = 1,
         Contains = 2,
         StartsWith = 3,
-        EndsWidth = 4,
+        EndsWith = 4,
         GreaterThan = 5,
         LessThan = 6,
         GreaterThanOrEquals = 7,
@@ -52,6 +57,6 @@ namespace AntDesign
     public enum TableFilterType
     {
         List = 1,
-        FeildType = 2
+        FieldType = 2
     }
 }

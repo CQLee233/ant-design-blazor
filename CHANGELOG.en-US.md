@@ -15,6 +15,97 @@ timeline: true
 
 ---
 
+### 0.8.2
+
+`2021-06-17`
+
+- Table
+  - 🐞 Fixed selection issues. [#1632](https://github.com/ant-design-blazor/ant-design-blazor/pull/1632) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed filter wrong compare operator after remove one filter condition; remove input components for 'Is Null' and 'Is Not Null' filter operators. [#1596](https://github.com/ant-design-blazor/ant-design-blazor/pull/1596) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed the issue that filters are not applied when close the filter panel by clicking filter icon area. [#1594](https://github.com/ant-design-blazor/ant-design-blazor/pull/1594) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed filter icon wrong highlight after clear the filter value; fix filter behavior when there is no input value. [#1592](https://github.com/ant-design-blazor/ant-design-blazor/pull/1592) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed can not close filter by confirm button. [#1602](https://github.com/ant-design-blazor/ant-design-blazor/pull/1602) [@anranruye](https://github.com/anranruye)
+  - 📖 update ‘fork official sample’ demo to enable the sorters. [#1544](https://github.com/ant-design-blazor/ant-design-blazor/pull/1544) [@anranruye](https://github.com/anranruye)
+
+- Dropdown
+  - 🐞 Add typical `Button` propertied to `DropdownButton`. Include demo &amp; API docs for `Dropdown` API and `Button` API. [#1609](https://github.com/ant-design-blazor/ant-design-blazor/pull/1609) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Add `Loading` parameter to `DropdownButton`. [#1588](https://github.com/ant-design-blazor/ant-design-blazor/pull/1588) [@anddrzejb](https://github.com/anddrzejb)
+
+- DatePicker
+  - 🐞 Add OnClearClick eventcallback. [#1586](https://github.com/ant-design-blazor/ant-design-blazor/pull/1586) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 fix(module:datepicker): in form behavior. [#1617](https://github.com/ant-design-blazor/ant-design-blazor/pull/1617) [@anddrzejb](https://github.com/anddrzejb)
+
+- InputNumber
+  - 🐞 fix the exception which is throwed when an InputNumber component for nullable type loses focus. [#1612](https://github.com/ant-design-blazor/ant-design-blazor/pull/1612) [@anranruye](https://github.com/anranruye)
+  - 🐞 fix(module:inputnumber): include parser in value evaluation. [#1567](https://github.com/ant-design-blazor/ant-design-blazor/pull/1567) [@anddrzejb](https://github.com/anddrzejb)
+
+- 🐞 New parameters for `Input`:  `Bordered`, `ReadOnly`, `InputElementSuffixClass` &amp; methods: `Focus()`, `Blur()`, fixed clear icon. <br> New parameter for `TextArea` `ShowCount`, fixed clear icon. <br> `Search` gets new look and paramter `ClassicSearchIcon` for fallback to old look. <br> `InputGroup` whitespace removed. <br> New parameters for `InputPassword`: `ShowPassword` &amp; `IconRender`. [#1530](https://github.com/ant-design-blazor/ant-design-blazor/pull/1530) [@anddrzejb](https://github.com/anddrzejb)
+
+- 🐞 Fixed Affix: remove wrong event listeners. [#1616](https://github.com/ant-design-blazor/ant-design-blazor/pull/1616) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed Drawer: OffsetX and offsetY do not work of Drawer, and update the documents how to use DrawerService by the way. [#1448](https://github.com/ant-design-blazor/ant-design-blazor/pull/1448) [@zxyao145](https://github.com/zxyao145)
+- 🐞 Fixed Radio: add defaultChecked and defaultValue. [#1494](https://github.com/ant-design-blazor/ant-design-blazor/pull/1494) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed Tag: Add support for Status and custom colors, add animation demo [#1631](https://github.com/ant-design-blazor/ant-design-blazor/pull/1631) [@anddrzejb](https://github.com/anddrzejb)
+- 🐞 Fixed Image: fix the style property position. [#1642](https://github.com/ant-design-blazor/ant-design-blazor/pull/1642) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed Checkbox: in-form behavior of CheckboxGroup component. [#1637](https://github.com/ant-design-blazor/ant-design-blazor/pull/1637) [@anranruye](https://github.com/anranruye)
+- 🌐 Fixed nl-BE and nl-NL locales. [#1624](https://github.com/ant-design-blazor/ant-design-blazor/pull/1624) [@gregloones](https://github.com/gregloones)
+- 🛠 add missing 'filterOptions' node to german locale file. [#1562](https://github.com/ant-design-blazor/ant-design-blazor/pull/1562) [@anranruye](https://github.com/anranruye)
+- 🌐 Added values missing from locale es-ES. [#1534](https://github.com/ant-design-blazor/ant-design-blazor/pull/1534) [@Magehernan](https://github.com/Magehernan)
+
+### 0.8.1
+
+`2021-05-13`
+
+- Overlay
+  - 🐞 Fixed positioning should take scroll into account. [#1511](https://github.com/ant-design-blazor/ant-design-blazor/pull/1511) [@ocoka](https://github.com/ocoka)
+  - 🐞 Fixed issues in boundaryAdjustMode. [#1420](https://github.com/ant-design-blazor/ant-design-blazor/pull/1420) [@mutouzdl](https://github.com/mutouzdl)
+
+- Input
+  - 🐞 Fixed for Guid type. [#1510](https://github.com/ant-design-blazor/ant-design-blazor/pull/1510) [@anranruye](https://github.com/anranruye)
+  - 🐞 Added `CultureInfo` attribute to `Input` type components. [#1480](https://github.com/ant-design-blazor/ant-design-blazor/pull/1480) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Fixed binding data when the Enter key is pressed. [#1375](https://github.com/ant-design-blazor/ant-design-blazor/pull/1375) [@ElderJames](https://github.com/ElderJames)
+
+- Table
+  - 🐞 Fixed built-in filter select option width. [#1500](https://github.com/ant-design-blazor/ant-design-blazor/pull/1500) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed error for EndsWith filter operator. [#1434](https://github.com/ant-design-blazor/ant-design-blazor/pull/1434) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed column header sorter not refresh after ClearSorter is called [#1385](https://github.com/ant-design-blazor/ant-design-blazor/pull/1385) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed can not use DataIndex nullable mode with not nullable property [#1382](https://github.com/ant-design-blazor/ant-design-blazor/pull/1382) [@anranruye](https://github.com/anranruye)
+  - 🐞 Fixed Filter for DataIndex. Unify FieldName, add DisplayAttribute for DiplayName. [#1372](https://github.com/ant-design-blazor/ant-design-blazor/pull/1372) [@Zonciu](https://github.com/Zonciu)
+  - 🐞 Fixed ellipsis can't work. [#1376](https://github.com/ant-design-blazor/ant-design-blazor/pull/1376) [@ElderJames](https://github.com/ElderJames)
+
+- Cascader
+  - 🐞 Fixed showSearch. [#1484](https://github.com/ant-design-blazor/ant-design-blazor/pull/1484) [@ElderJames](https://github.com/ElderJames)
+  - 🐞 Fixed invoking SelectedNodesChanged after clear selected. [#1437](https://github.com/ant-design-blazor/ant-design-blazor/pull/1437) [@ElderJames](https://github.com/ElderJames)
+  - 🐞 Fixed incorrect size. [#1432](https://github.com/ant-design-blazor/ant-design-blazor/pull/1432) [@ElderJames](https://github.com/ElderJames)
+
+- DatePicker
+  - 🐞 Fixed panel click closing + some issues from #1431. [#1452](https://github.com/ant-design-blazor/ant-design-blazor/pull/1452) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Fixed validate manually entered date against format. [#1389](https://github.com/ant-design-blazor/ant-design-blazor/pull/1389) [@anddrzejb](https://github.com/anddrzejb)
+
+- Modal
+  - 🐞 Fixed Delay time to DOM_ MIN_ TIMEOUT_ VALUE (4ms). [#1445](https://github.com/ant-design-blazor/ant-design-blazor/pull/1445) [@zxyao145](https://github.com/zxyao145)
+  - 🐞 Fixed add Dispose lifecycle function to Dialog. [#1379](https://github.com/ant-design-blazor/ant-design-blazor/pull/1379) [@zxyao145](https://github.com/zxyao145)
+  - 🆕 support define modal's style in ModalOptions [#1400](https://github.com/ant-design-blazor/ant-design-blazor/pull/1400) [@zxyao145](https://github.com/zxyao145)
+
+- Form
+  - 🆕 Select mutliple/tags can be used in forms. [#1460](https://github.com/ant-design-blazor/ant-design-blazor/pull/1460) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Fixed validation message unique [#1391](https://github.com/ant-design-blazor/ant-design-blazor/pull/1391) [@ElderJames](https://github.com/ElderJames)
+
+- Select
+  - 🐞 Fixed error for nullable TItem of SelectOption. [#1451](https://github.com/ant-design-blazor/ant-design-blazor/pull/1451) [@anranruye](https://github.com/anranruye)
+  - 🛠 Refactor: use ResizeObserver Api instead of window.resize. [#1392](https://github.com/ant-design-blazor/ant-design-blazor/pull/1392) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Fixed OnDataSourceChange called when expected. [#1419](https://github.com/ant-design-blazor/ant-design-blazor/pull/1419) [@anddrzejb](https://github.com/anddrzejb)
+  - 🐞 Fixed enum default value protection. [#1368](https://github.com/ant-design-blazor/ant-design-blazor/pull/1368) [@anddrzejb](https://github.com/anddrzejb)
+
+- 🐞 Fixed checkbox remove Value initialization blocking. [#1459](https://github.com/ant-design-blazor/ant-design-blazor/pull/1459) [@anddrzejb](https://github.com/anddrzejb)
+- 🐞 Fixed input number self changing. [#1490](https://github.com/ant-design-blazor/ant-design-blazor/pull/1490) [@CAPCHIK](https://github.com/CAPCHIK)
+- 🐞 `Checkbox` and `Switch` allow now binding to `Changed` property. `Value` and `Changed` properties can be used interchangeably. [#1394](https://github.com/ant-design-blazor/ant-design-blazor/pull/1394) [@anddrzejb](https://github.com/anddrzejb)
+- 🐞 Fixed Tag closable typo and delete mode [#1393](https://github.com/ant-design-blazor/ant-design-blazor/pull/1393) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed PasswordInput for retrieving and setting the `selectionStart`; Override `onClick`. [#1377](https://github.com/ant-design-blazor/ant-design-blazor/pull/1377) [@MihailsKuzmins](https://github.com/MihailsKuzmins)
+- 🆕 feat: add element component. [#1378](https://github.com/ant-design-blazor/ant-design-blazor/pull/1378) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed Affix can't affix while OffsetTop is zero. [#1373](https://github.com/ant-design-blazor/ant-design-blazor/pull/1373) [@ElderJames](https://github.com/ElderJames)
+- 🐞 Fixed js function getDom return null bug. [#1417](https://github.com/ant-design-blazor/ant-design-blazor/pull/1417) [@zxyao145](https://github.com/zxyao145)
+- 🐞 Fixed dropdown width for IE. [#1469](https://github.com/ant-design-blazor/ant-design-blazor/pull/1469) [@anranruye](https://github.com/anranruye)
+
 ### 0.8.0
 
 `2021-04-15`

@@ -43,7 +43,7 @@ When requiring users to interact with the application, but without jumping to a 
 | ZIndex            | The z-index of the Modal                                     | int                           | 1000          |
 | OnCancel          | Specify a function that will  be called when a user clicks mask, close button on top right or Cancel button | EventCallback<MouseEventArgs> | -             |
 | OnOk              | Specify a function that will  be called when a user clicks the OK button | EventCallback<MouseEventArgs> | -             |
-| Draggable | Is it allowed to drag Modal through its Header | bool | false |
+| Draggable | Is it allowed to drag Modal through its Header（if true, at least one of Title and TitleTemplate must have a value） | bool | false |
 | DragInViewport | If Draggable is true, and is it only allowed drag Modal in the viewport | bool | true |
 
 #### Note
@@ -89,13 +89,13 @@ There are some ways to display the information based on the content's nature:
 
 | CancelText        | Text  of the Cancel button, equivalent to Button2Props.ChildContent | string\|RenderFragment                         | Cancel  |
 | ----------------- | ------------------------------------------------------------ | ------------------------------ | ------- |
-| Centered          | Centered Modal                                               | bool                           | fasle   |
+| Centered          | Centered Modal                                               | bool                           | false   |
 | ClassName         | className of container                                       | string                         | -       |
 | Content           | Content                                                      | string\|RenderFragment         | -       |
 | Icon              | custom icon                                                  | RenderFragment                 | -       |
 | Keyboard          | Whether support press esc to  close                          | bool                           | true    |
 | Mask              | Whether show mask or not.                                    | bool                           | true    |
-| MaskClosable      | Whether to close the modal  dialog when the mask (area outside the modal) is clicked | bool                           | fasle   |
+| MaskClosable      | Whether to close the modal  dialog when the mask (area outside the modal) is clicked | bool                           | false   |
 | OkText            | Text of the OK button, equivalent to Button1Props.ChildContent | string                         | OK      |
 | OkType            | Button type of the OK button, equivalent to Button1Props.Type  | string                         | primary |
 | OkButtonProps     | The ok button props , equivalent to Button1Props  | ButtonProps                    | -       |
